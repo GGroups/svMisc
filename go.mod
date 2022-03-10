@@ -1,4 +1,4 @@
-module miscSvr
+module github.com/GGroups/svMisc
 
 go 1.17
 

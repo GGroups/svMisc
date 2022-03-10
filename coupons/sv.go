@@ -18,7 +18,7 @@ type Coupons struct {
 	CouponId     string `json"couponId"`
 }
 
-func (s Coupons) GetBannerItems(t string) []Coupons {
+func (s Coupons) GetCouponsItems(t string) []Coupons {
 	ss := []Coupons{
 		{ValidityTime: 1, Now: 0, End: 1, LimitPrice: 10, Key: "1", Remark: "不能叠使用", CouponId: "1"},
 	}

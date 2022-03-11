@@ -13,7 +13,7 @@ func CommEncodeResponse(c context.Context, w http.ResponseWriter, response inter
 	return json.NewEncoder(w).Encode(response)
 }
 
-func BannerDecodeRequest(c context.Context, request *http.Request) (interface{}, error) {
+func CouponsDecodeRequest(c context.Context, request *http.Request) (interface{}, error) {
 	if request.Method != "POST" {
 		return nil, errors.New("#must POST")
 	}

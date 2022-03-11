@@ -9,6 +9,7 @@ type ICoupons interface {
 }
 
 type Coupons struct {
+	ValidateType int    `json:"validityType"`
 	ValidityTime int    `json:"validityTime"`
 	Now          int    `json:"now"`
 	End          int    `json:"end"`

@@ -21,7 +21,7 @@ type Coupons struct {
 
 func (s Coupons) GetCouponsItems(t string) []Coupons {
 	ss := []Coupons{
-		{ValidityTime: 1, Now: 0, End: 1, Limitprice: 10, Key: "1", Remark: "不能叠使用", Couponid: "1"},
+		{ValidateType: 2, ValidityTime: 1, Now: 0, End: 1, Limitprice: 10, Key: "1", Remark: "不能叠使用", Couponid: "1"},
 	}
 	return ss
 }

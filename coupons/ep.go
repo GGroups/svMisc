@@ -3,7 +3,6 @@ package coupons
 import (
 	"context"
 	"errors"
-	"log"
 
 	"github.com/go-kit/kit/endpoint"
 )
@@ -21,7 +20,6 @@ type MainCouponsResponse struct {
 func MakeCouponsEndPoint(sv ICoupons) endpoint.Endpoint {
 	return func(ctx context.Context, request interface{}) (response interface{}, err error) {
 		r, ok := request.(MainCouponsRequest)
-		log.Println(request)
 		if !ok {
 			return MainCouponsResponse{}, nil
 		}

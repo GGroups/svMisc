@@ -17,7 +17,7 @@ type AuthTXResponse struct {
 	RetCode string   `json:"retode"`
 }
 
-func AuthTXEndPoint(sv IAuthTX) endpoint.Endpoint {
+func MakeAuthTXEndPoint(sv IAuthTX) endpoint.Endpoint {
 	return func(ctx context.Context, request interface{}) (response interface{}, err error) {
 		r, ok := request.(AuthTXRequest)
 		if !ok {

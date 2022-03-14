@@ -1,4 +1,4 @@
-package coupons
+package authtx
 
 import (
 	"context"

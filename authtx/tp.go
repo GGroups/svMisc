@@ -1,4 +1,4 @@
-package coupons
+package authtx
 
 import (
 	"context"
@@ -21,7 +21,7 @@ func AuthTXDecodeRequest(c context.Context, request *http.Request) (interface{},
 	if err != nil {
 		return nil, errors.New(INPUTE_RROR + err.Error())
 	}
-	var obj AuthTXResponse
+	var obj AuthTXRequest
 	err = json.Unmarshal(body, &obj)
 	if err != nil {
 		return nil, errors.New(INPUTE_RROR + err.Error())

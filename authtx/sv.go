@@ -1,4 +1,4 @@
-package coupons
+package authtx
 
 const (
 	INPUTE_RROR = "#input format Error#"

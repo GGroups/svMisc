@@ -7,8 +7,13 @@ import (
 	"github.com/go-kit/kit/endpoint"
 )
 
+type MallInfo struct {
+	ChannelId string `json:"channelId"`
+}
+
 type AuthTXRequest struct {
-	Type string `json:"type"`
+	MallInfo MallInfo `json:"mallInfo"`
+	Type     string   `json:"type"`
 }
 
 type AuthTXResponse struct {

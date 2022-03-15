@@ -28,23 +28,23 @@ func (s AuthTX) GetAuthTXItems(t string) []AuthTX {
 	// 	"name/cos:UploadPart",
 	// 	"name/cos:CompleteMultipartUpload",
 	// 	"name/cos:AbortMultipartUpload"}
+	var secretId, secretKey, bucket, region string
+	if t == "gpwm" {
+		secretId = "AKIDgBPN4UcT3MO9esoTryoNfkY5LL4XmlTu"
+		secretKey = "B5i48vRgeKjriIcfQu73h49xUjiPr2wZ"
+		bucket = "mj100-1308576853"
+		region = "ap-shanghai"
+	}
 	ss := []AuthTX{
 		{
-			SecretId:        "AKIDgBPN4UcT3MO9esoTryoNfkY5LL4XmlTu",
-			SecretKey:       "B5i48vRgeKjriIcfQu73h49xUjiPr2wZ",
+			SecretId:        secretId,
+			SecretKey:       secretKey,
 			Proxy:           "",
 			DurationSeconds: 1800,
-			Bucket:          "mj100-1308576853",
-			Region:          "ap-shanghai",
+			Bucket:          bucket,
+			Region:          region,
 			AllowPrefix:     "",
-			AllowActions: []string{"name/cos:PutObject",
-				"name/cos:PostObject",
-				"name/cos:InitiateMultipartUpload",
-				"name/cos:ListMultipartUploads",
-				"name/cos:ListParts",
-				"name/cos:UploadPart",
-				"name/cos:CompleteMultipartUpload",
-				"name/cos:AbortMultipartUpload"},
+			AllowActions:    []string{"name/cos:GetServic"},
 		},
 	}
 	return ss

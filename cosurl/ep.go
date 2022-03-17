@@ -32,6 +32,6 @@ func MakeObjUrlEndPoint(sv IObjUrl) endpoint.Endpoint {
 		if r.Type != "wx" {
 			return nil, errors.New(INPUTE_RROR + `not "wx"`)
 		}
-		return ObjUrlResponse{UrlObjs: sv.GetObjUrlItems(r), Msg: "ok", RetCode: "0"}, nil
+		return ObjUrlResponse{UrlObjs: sv.GetObjUrlItems(r.UrlObjs, r.MallInfo.ChannelId), Msg: "ok", RetCode: "0"}, nil
 	}
 }
